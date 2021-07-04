@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container scroll-con">
+  <div class="form-group card p-3 card-cas">
+    <div class="text-center">
+      <b><h3>แบบฟอร์มเข้าจังหวัดสงขลา</h3>
+      <p>Songkhla Arrivals Form</p></b><br> 
+    </div>
+
+    <div>
+    <h4><b>ประวัติทั่วไป</b></h4>
+    <p>ชื่อ-นามสกุล / First name-Last name : {{ name }}<br>
+    เบอร์โทร / Phone number : {{ tel }}</p>
+
+    <br>
+    <h4><b>ประวัติการเดินทาง</b></h4>
+    <p>
+    <b>เดินทางมาจาก (Travelling from)</b><br>
+    จังหวัด / Province : {{ province1 }}<br> 
+    อำเภอ / District : {{ districts1 }}<br>   
+    ตำบล / Sub-District : {{ subdistrict1 }}<br>
+    </p>
+
+    <br>
+    <h4><b>ประวัติการเดินทาง</b></h4>
+    <p>
+    <b>กำลังเดินทางไป (Travelling to)</b><br>
+    จังหวัด / Province : {{ province2 }}<br> 
+    อำเภอ / District : {{ districts2 }}<br>   
+    ตำบล / Sub-District : {{ subdistrict2 }}<br>
+    </p>
+   </div>
+
+    <br>
+    <div><center>
+        <input type="button" value="ย้อนกลับ (Back)" class="btn btn-primary" onclick="history.back()">
+        <input type="button" value="ยืนยัน (Confirm)" class="btn btn-primary" onclick="window.location='/index'">
+    </center>
+    </div>
+
+</div>
+<br>
+</div>
+
+
+
+
+ 
+{% endblock %}
